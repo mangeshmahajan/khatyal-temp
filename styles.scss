@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+
+$dark-color: #121212;
+$light-color: #fff;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Neucha", cursive;
+  font-size: 21px;
+  font-weight: 400;
+
+  background: url("./img/bg.png") repeat;
+  color: $light-color;
+}
+
+// typography ---------------------------------------------------------------------------------
+
+p {
+  font-size: 1em;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 3.9em;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.2em;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+p .sub {
+  font-size: 0.5em;
+}
+
+// typography ---------------------------------------------------------------------------------
+
+// nav-bar ------------------------------------------------------------------------------------
+
+.nav-bar--content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+.nav-bar {
+  background-color: #29292996;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.199);
+}
+
+.nav-bar--fields {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.nav-bar--fields > p {
+  margin-left: 65px;
+}
+
+.nav-bar--fields p {
+  opacity: 0.3;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.nav-bar--fields p.active {
+  opacity: 1;
+  //   font-size: 25px;
+}
+
+.nav-bar--logo {
+  font-family: Neucha;
+  font-size: 33px;
+  line-height: 55px;
+  letter-spacing: 0em;
+  cursor: pointer;
+}
+
+// nav-bar ------------------------------------------------------------------------------------
+
+// home ------------------------------------------------------------------------------------
+
+.home {
+  width: 60%;
+  // height: 50vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 190px;
+  margin-bottom: 100px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+  padding-bottom: 100px;
+
+  align-items: center;
+
+  // border: 1px solid magenta;
+}
+
+.home > div:first-of-type {
+  margin-right: 50px;
+}
+
+.home--text h2 {
+  // width: 80%;
+  margin-bottom: 50px;
+}
+
+.home--logo img {
+  width: 200px;
+  // border: 1px solid magenta;
+}
+
+// home ------------------------------------------------------------------------------------
+
+// projects --------------------------------------------------------------------------------
+
+.projects {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+  padding-bottom: 100px;
+}
+
+.projects h2 {
+  // border: 1px solid magenta;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.projects p {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.slider {
+  margin-top: 50px;
+}
+
+.swiper-slide .img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 200px;
+  object-fit: cover;
+
+  img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .black-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(196, 196, 196, 0) 0%,
+      rgba(0, 0, 0, 0) 0.01%,
+      #000000 100%
+    );
+    position: absolute;
+    display: grid;
+    place-items: center;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    img{
+      width: 50px;
+    }
+  }
+}
+
+.img h2 {
+  margin-bottom: 20px;
+}
+
+.img .case-study {
+  font-size: 15px;
+  text-align: right;
+
+  color: white;
+}
+
+.project-text {
+  position: absolute;
+
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+// projects --------------------------------------------------------------------------------
+
+// services --------------------------------------------------------------------------------
+
+.services {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+  padding-bottom: 100px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.services-sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.services--text {
+  width: 58%;
+}
+
+.services--widget {
+  display: grid;
+  place-items: center;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.151);
+}
+
+// services --------------------------------------------------------------------------------
+
+// team ------------------------------------------------------------------------------------
+
+.team {
+  width: 73%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+  padding-bottom: 100px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  p {
+    width: 63%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+
+.founder {
+  width: 31%;
+  background-color: #171717;
+  box-shadow: 14px 14px 40px 0px #000000;
+
+  padding-bottom: 8px;
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  h3,
+  p {
+    text-align: center;
+  }
+
+  p {
+    font-size: 0.7em;
+    opacity: 0.8;
+    margin-top: 5px;
+  }
+}
+
+.founders {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  margin-top: 50px;
+}
+
+.whole-team {
+  h2 {
+    text-align: left;
+    margin-left: 5%;
+  }
+
+  .team-slider{
+    // border: 1px solid magenta;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    // justify-content: center;
+
+    .artist{
+      // border: 2px solid green;
+      display: inline-block;
+
+      img{
+        width: 150px;
+        margin: 0 auto;
+        display: block;
+
+        
+      }
+      
+
+
+      .artist-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+
+        artist-work{
+          font-size: 1rem;
+          opacity: .6;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+}
+
+// team ------------------------------------------------------------------------------------
+
+// contact ---------------------------------------------------------------------------------
+
+.contact {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .contact--inputs input {
+    background-color: rgba(255, 255, 255, 0.082);
+    border: none;
+    padding: 10px;
+
+    margin-bottom: 12px;
+    outline: none;
+
+    color: #fff;
+  }
+
+  .contact--inputs input:last-of-type {
+    padding-bottom: 110px;
+  }
+}
+
+.contact--inputs {
+  display: flex;
+  flex-direction: column;
+  // border: 1px solid magenta;
+}
+
+.contact--contents {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.email-contact {
+  width: 50%;
+}
+
+.call-away {
+  margin-left: 50px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.send {
+  background-color: rgb(95, 95, 95);
+  border: none;
+  color: white;
+  padding: 8px 22px;
+  margin-top: 10px;
+  font-family: "Neucha";
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.15rem;
+}
+
+// contact -----------------------------------------------------------------------------------
+
+// footer ------------------------------------------------------------------------------------
+
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 0;
+  background-color: rgba(255, 255, 255, 0.082);
+}
+
+.footer p {
+  margin-left: 15%;
+  opacity: 0.85;
+  font-size: 1.1rem;
+
+  // display: none;
+}
+
+.footer .social-logos {
+  margin-right: 15%;
+  display: flex;
+
+  img {
+    margin-left: 20px;
+    opacity: 0.8;
+  }
+}
+
+// Swiper Styles ---------------------------------------------------------------------------
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+}
+
+// Swiper Styles ---------------------------------------------------------------------------
